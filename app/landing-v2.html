@@ -413,6 +413,15 @@ window.addEventListener('scroll', () => {
   }
   lastScroll = st;
 });
+
+// Tracking
+const SB_URL='https://pgtuzwvlmcgivqsrscrn.supabase.co';
+const SB_KEY='eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InBndHV6d3ZsbWNnaXZxc3JzY3JuIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzU4NzA3NTgsImV4cCI6MjA5MTQ0Njc1OH0.WmaIEP-aNb-jObkbaL5LbOjJYcKIb5wnC95L6YEDuvo';
+function track(ev){
+  fetch(SB_URL+'/rest/v1/cd_tracking',{method:'POST',headers:{'Content-Type':'application/json','apikey':SB_KEY,'Authorization':'Bearer '+SB_KEY,'Prefer':'return=minimal'},body:JSON.stringify({event:ev,page:location.pathname,referrer:document.referrer||null,user_agent:navigator.userAgent})}).catch(()=>{});
+}
+track('pageview');
+document.querySelectorAll('.cta-btn').forEach(b=>b.addEventListener('click',()=>track('cta_click')));
 </script>
 </body>
 </html>
