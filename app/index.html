@@ -69,14 +69,13 @@ body{font-family:'Inter',sans-serif;background:#0a0a0a;color:#fff;line-height:1.
 
 /* INCLUDES */
 .includes{background:linear-gradient(180deg,#0d1117,#1a1206);padding:40px 20px}
-.include-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-bottom:24px}
-.include-card{background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);border-radius:12px;padding:14px;text-align:center;position:relative}
-.include-card img{width:100%;max-width:160px;height:auto;margin:0 auto 10px;display:block;border-radius:6px}
-.include-card .card-title{font-size:0.82em;font-weight:600;line-height:1.3;color:#ddd}
+.include-grid{display:flex;flex-direction:column;gap:12px;margin-bottom:24px;max-width:500px;margin-left:auto;margin-right:auto}
+.include-card{background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);border-radius:12px;padding:12px;display:flex;align-items:center;gap:14px;position:relative}
+.include-card img{width:80px;height:100px;object-fit:cover;border-radius:8px;flex-shrink:0}
+.include-card .card-title{font-size:0.9em;font-weight:600;line-height:1.4;color:#ddd}
 .include-card.bonus{border-color:rgba(232,222,193,0.3);background:rgba(232,222,193,0.05)}
 .bonus-tag{background:#e8dec1;color:#0a0a0a;padding:2px 8px;border-radius:4px;font-size:0.65em;font-weight:700;position:absolute;top:8px;right:8px}
-.bonus-divider{grid-column:1/-1;text-align:center;padding:8px 0;font-family:'Playfair Display',serif;color:#e8dec1;font-size:1.1em;font-weight:600}
-@media(max-width:400px){.include-grid{grid-template-columns:repeat(2,1fr);gap:10px}.include-card img{max-width:120px}}
+.bonus-divider{text-align:center;padding:12px 0 4px;font-family:'Playfair Display',serif;color:#e8dec1;font-size:1.1em;font-weight:600}
 
 /* TESTIMONIALS */
 .testimonial{background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);border-radius:12px;padding:18px;margin-bottom:14px}
