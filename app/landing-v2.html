@@ -69,10 +69,14 @@ body{font-family:'Inter',sans-serif;background:#0a0a0a;color:#fff;line-height:1.
 
 /* INCLUDES */
 .includes{background:linear-gradient(180deg,#0d1117,#1a1206);padding:40px 20px}
-.include-item{background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);border-radius:10px;padding:14px 16px;margin-bottom:8px;font-size:0.9em;display:flex;align-items:center;gap:10px}
-.include-item .icon{font-size:1.2em}
-.bonus{border-color:rgba(232,222,193,0.3);background:rgba(232,222,193,0.05)}
-.bonus-tag{background:#e8dec1;color:#0a0a0a;padding:2px 8px;border-radius:4px;font-size:0.7em;font-weight:700;margin-left:auto;flex-shrink:0}
+.include-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-bottom:24px}
+.include-card{background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);border-radius:12px;padding:14px;text-align:center;position:relative}
+.include-card img{width:100%;max-width:160px;height:auto;margin:0 auto 10px;display:block;border-radius:6px}
+.include-card .card-title{font-size:0.82em;font-weight:600;line-height:1.3;color:#ddd}
+.include-card.bonus{border-color:rgba(232,222,193,0.3);background:rgba(232,222,193,0.05)}
+.bonus-tag{background:#e8dec1;color:#0a0a0a;padding:2px 8px;border-radius:4px;font-size:0.65em;font-weight:700;position:absolute;top:8px;right:8px}
+.bonus-divider{grid-column:1/-1;text-align:center;padding:8px 0;font-family:'Playfair Display',serif;color:#e8dec1;font-size:1.1em;font-weight:600}
+@media(max-width:400px){.include-grid{grid-template-columns:repeat(2,1fr);gap:10px}.include-card img{max-width:120px}}
 
 /* TESTIMONIALS */
 .testimonial{background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);border-radius:12px;padding:18px;margin-bottom:14px}
@@ -203,16 +207,56 @@ body{font-family:'Inter',sans-serif;background:#0a0a0a;color:#fff;line-height:1.
 <div class="section" style="padding-top:0;padding-bottom:0">
   <h2 class="section-title">Todo lo que <span>recibiras hoy</span></h2>
 
-  <div class="include-item"><span class="icon">1.</span> 170 Bosquejos del Libro de Josue</div>
-  <div class="include-item"><span class="icon">2.</span> Exodo - Versiculo por Versiculo</div>
-  <div class="include-item"><span class="icon">3.</span> Genesis - Versiculo por Versiculo</div>
-  <div class="include-item"><span class="icon">4.</span> Levitico - Versiculo por Versiculo</div>
-  <div class="include-item"><span class="icon">5.</span> 30 Dias de Oracion</div>
-  <div class="include-item bonus"><span class="icon">6.</span> Los 10 Mandamientos <span class="bonus-tag">BONO</span></div>
-  <div class="include-item bonus"><span class="icon">7.</span> Los Milagros de Jesus <span class="bonus-tag">BONO</span></div>
-  <div class="include-item bonus"><span class="icon">8.</span> Historias Biblicas para toda la Familia <span class="bonus-tag">BONO</span></div>
-  <div class="include-item bonus"><span class="icon">9.</span> Devocionales de Poder <span class="bonus-tag">BONO</span></div>
-  <div class="include-item bonus"><span class="icon">10.</span> Manual de Interpretacion Biblica <span class="bonus-tag">BONO</span></div>
+  <div class="include-grid">
+    <div class="include-card">
+      <img src="./Home_files/1754920122-AVLaED2RLRtvoNoe.png" alt="170 Bosquejos del Libro de Josue" loading="lazy">
+      <div class="card-title">170 Bosquejos del Libro de Josue</div>
+    </div>
+    <div class="include-card">
+      <img src="./Home_files/1754920422-Awv9xL6n15uK6Kpk.png" alt="Genesis Versiculo por Versiculo" loading="lazy">
+      <div class="card-title">Genesis - Versiculo por Versiculo</div>
+    </div>
+    <div class="include-card">
+      <img src="./Home_files/1754920998-A85VW6bO0GF1zXo3.png" alt="Exodo Versiculo por Versiculo" loading="lazy">
+      <div class="card-title">Exodo - Versiculo por Versiculo</div>
+    </div>
+    <div class="include-card">
+      <img src="./Home_files/1754921657-mnlJD7MLKVf1oD47.png" alt="Levitico Versiculo por Versiculo" loading="lazy">
+      <div class="card-title">Levitico - Versiculo por Versiculo</div>
+    </div>
+    <div class="include-card">
+      <img src="./Home_files/1754920171-mxBXLxJRznU0EWeB.png" alt="30 Dias de Oracion" loading="lazy">
+      <div class="card-title">30 Dias de Oracion con Versiculos del Pentateuco</div>
+    </div>
+
+    <div class="bonus-divider">+ 5 Bonos Exclusivos</div>
+
+    <div class="include-card bonus">
+      <span class="bonus-tag">BONO</span>
+      <img src="./Home_files/1754593755-mePJ4397ZvULDebL.png" alt="Los 10 Mandamientos" loading="lazy">
+      <div class="card-title">Los 10 Mandamientos - Historia y Aplicacion Espiritual</div>
+    </div>
+    <div class="include-card bonus">
+      <span class="bonus-tag">BONO</span>
+      <img src="./Home_files/1754593871-Y4LvzE71PnUOvDn5.png" alt="Los Milagros de Jesus" loading="lazy">
+      <div class="card-title">Los Milagros de Jesus</div>
+    </div>
+    <div class="include-card bonus">
+      <span class="bonus-tag">BONO</span>
+      <img src="./Home_files/1754593730-m6Lbn4NRZqUoJ327.png" alt="Historias Biblicas" loading="lazy">
+      <div class="card-title">Historias Biblicas para toda la Familia</div>
+    </div>
+    <div class="include-card bonus">
+      <span class="bonus-tag">BONO</span>
+      <img src="./Home_files/1754593687-dJobMGvyM8TbRGP6.png" alt="Devocionales de Poder" loading="lazy">
+      <div class="card-title">Devocionales de Poder - 30 Dias</div>
+    </div>
+    <div class="include-card bonus">
+      <span class="bonus-tag">BONO</span>
+      <img src="./Home_files/1754593781-m5KnqWzo1ltzlGw0.png" alt="Manual de Interpretacion Biblica" loading="lazy">
+      <div class="card-title">Manual de Interpretacion Biblica para Principiantes</div>
+    </div>
+  </div>
 
   <div style="text-align:center;margin-top:30px">
     <div class="price-box">
